@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import axios from "axios";
+import { useState } from "react-router-dom";
 
 const Smartphone = () => {
     const [input, setInput] = useState("");
