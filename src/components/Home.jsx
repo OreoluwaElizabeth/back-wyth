@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 const Home = () => {
     const [display, setDisplay] = React.useState('0');
