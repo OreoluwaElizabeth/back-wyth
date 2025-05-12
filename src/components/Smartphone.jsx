@@ -20,7 +20,7 @@ const Smartphone = () => {
     const handleSend = async () => {
         if (!input) return;
         try {
-            const response  = await axios.post(`${BASE_URL}/api/v1/user/collect/collect`, {}, {
+            const response  = await axios.post(`${BASE_URL}/api/v1/user/userResponse/collect?`, {}, {
                 params: {
                     sessionId,
                     serviceCode: input,
