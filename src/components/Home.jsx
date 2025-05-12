@@ -17,6 +17,23 @@ const Home = () => {
         }
     };
 
+    useEffect (() => {
+        const fetchUssdMenus = async () => {
+            try {
+                const response = await axios.get('');
+                setUssdMenus((prev) => ({ ...prev, ...response.data}));
+            } catch (error) {
+                console.error('Failed to fetch USSD menus:', error);
+                setDisplay('Error fetching menu');
+                setTimeout(() => {
+                    setDisplay('0');
+                    setMode('input');
+                }, 1500);
+            }
+        };
+        fetchUssdMenus();
+    }, []);
+
     const appendNumber = (number) => {
         if (mode === 'input') {
             setDisplay((prev) => (prev === '0' ? number : prev + number));
