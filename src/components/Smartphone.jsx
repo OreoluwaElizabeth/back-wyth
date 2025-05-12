@@ -218,12 +218,14 @@ const Smartphone = () => {
                                     flex: 1,
                                     margin: '0 3px',
                                     opacity: input ? 1 : 0.6
-                                }}></button>
+                                }}> Send</button>
                             </div>
                         </div>
                     )}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Smartphone;
